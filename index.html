@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jspmunihub | Buy & Sell Second Hand</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container nav">
+        <div class="logo-wrap">
+          <div class="logo">J</div>
+          <span>Jspmunihub</span>
+        </div>
+
+        <nav class="menu">
+          <a href="#home">Home</a>
+          <a href="#products">Products</a>
+          <a href="#sell">Sell</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="ghost-btn">Login</button>
+          <button class="primary-btn" id="checkoutBtn">Checkout</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <span class="tag">Sustainable shopping marketplace</span>
+            <h1>Buy smart. Sell fast. Save more.</h1>
+            <p>
+              Discover trusted second-hand products across electronics, vehicles, fashion,
+              furniture, and more — all in one place.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#products" class="primary-btn large">Explore Deals</a>
+              <a href="#sell" class="secondary-btn large">Sell an Item</a>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <strong>10k+</strong>
+                <span>happy buyers</span>
+              </div>
+              <div>
+                <strong>3k+</strong>
+                <span>products sold</span>
+              </div>
+              <div>
+                <strong>99%</strong>
+                <span>trusted experience</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="floating-card card-one">
+              <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=800&q=80" alt="Featured item" />
+              <div class="card-info">
+                <small>Featured</small>
+                <h3>MacBook Air</h3>
+                <p>₹58,999</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="products-section" id="products">
+        <div class="container">
+          <div class="section-top">
+            <div>
+              <span class="mini-tag">Marketplace</span>
+              <h2>Popular listings</h2>
+            </div>
+            <div class="search-wrap">
+              <input id="searchInput" type="text" placeholder="Search products..." />
+            </div>
+          </div>
+
+          <div class="filter-bar" id="filterBar">
+            <button class="filter-btn active" data-category="All">All</button>
+            <button class="filter-btn" data-category="Electronics">Electronics</button>
+            <button class="filter-btn" data-category="Vehicles">Vehicles</button>
+            <button class="filter-btn" data-category="Fashion">Fashion</button>
+            <button class="filter-btn" data-category="Furniture">Furniture</button>
+            <button class="filter-btn" data-category="Sports">Sports</button>
+          </div>
+
+          <div class="shop-grid">
+            <div id="productGrid" class="product-grid"></div>
+
+            <aside class="cart-panel">
+              <h3>Your Cart</h3>
+              <div id="cartItems" class="cart-items">
+                <p class="empty-cart">Cart is empty.</p>
+              </div>
+
+              <div class="cart-footer">
+                <div class="summary-row">
+                  <span>Subtotal</span>
+                  <strong id="subtotal">₹0</strong>
+                </div>
+                <button id="payNowBtn" class="primary-btn full">Pay Now</button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="sell-section" id="sell">
+        <div class="container">
+          <div class="sell-box">
+            <div class="sell-copy">
+              <span class="mini-tag">Sell Fast</span>
+              <h2>List your item in under 2 minutes</h2>
+              <p>
+                Start earning by listing your used products with clear pricing, location,
+                and condition details.
+              </p>
+            </div>
+
+            <form id="sellForm" class="sell-form">
+              <div class="two-col">
+                <input type="text" name="title" placeholder="Product Title" required />
+                <input type="text" name="category" placeholder="Category" />
+              </div>
+
+              <div class="two-col">
+                <input type="number" name="price" placeholder="Price (₹)" required />
+                <input type="text" name="condition" placeholder="Condition" />
+              </div>
+
+              <div class="two-col">
+                <input type="text" name="location" placeholder="Location" />
+                <input type="url" name="image" placeholder="Image URL" />
+              </div>
+
+              <textarea name="description" placeholder="Short description"></textarea>
+              <button type="submit" class="primary-btn full">List Product</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about">
+        <div class="container">
+          <div class="about-header">
+            <span class="mini-tag">Why Jspmunihub</span>
+            <h2>Smart shopping for smart people</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <h3>Verified Deals</h3>
+              <p>Every item is listed with real details, pricing, and location help.</p>
+            </div>
+            <div class="about-card">
+              <h3>Secure Checkout</h3>
+              <p>Buyer-friendly online payment process for smooth and safe transactions.</p>
+            </div>
+            <div class="about-card">
+              <h3>Quick Selling</h3>
+              <p>No complicated process — list your product and connect with buyers fast.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>© 2026 Jspmunihub</p>
+        <p>Buy • Sell • Trade</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
